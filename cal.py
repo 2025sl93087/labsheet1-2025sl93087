@@ -9,7 +9,7 @@ def sub(a,b):
 
 def div(a,b):
     if b==0:
-	return None
+        return None
     return a/b
 
 if __name__ == "__main__":
