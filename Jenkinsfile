@@ -24,7 +24,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'echo Deploy Stage'
+                sh '''
+        scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/key_2.pem cal.py ec2-user@ec2-13-51-170-1.eu-north-1.compute.amazonaws.com:/home/ec2-user
+        '''    
             }
         }
     }
